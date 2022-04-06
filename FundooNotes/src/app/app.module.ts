@@ -10,17 +10,22 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { ForgetpassComponent } from './components/forgetpass/forgetpass.component';
+import { ResetpassComponent } from './components/resetpass/resetpass.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterationComponent,
-    LoginComponent
+    LoginComponent,
+    ForgetpassComponent,
+    ResetpassComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule
+    BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule,FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

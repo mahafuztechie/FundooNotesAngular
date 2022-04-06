@@ -4,18 +4,32 @@
     margin-right: 25%;
     height: 100%;
     width: 50%;
-    border: 1px solid rgba(245, 238, 238, 0.76);
+    border: 1px solid rgba(194, 192, 192, 0.76);
     border-radius: 10px;
     padding: 20px;
     .headings{
         h1{
             font-size: large;
-            background: -webkit-linear-gradient(rgb(243, 247, 3), rgb(252, 4, 4));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-weight:500;
+            .f{
+                color: rgb(0, 0, 255);
+            }
+            .u{
+                color: rgb(253, 116, 4);
+            }
+            .n{
+                color: rgb(255, 0, 0);
+            }
+            .d{
+                color: rgb(0, 202, 34);
+            }
+            .o{
+                color: rgb(255, 115, 0);
+            }
             
         }
         h3{
+            margin-top: -15px;
             font-size: larger;
         }
     }
@@ -37,10 +51,15 @@
             .password-container{
                 display: flex;
                 gap: 20px;
+                height: 60px;
                 .password{
                     width: 150px;
                 } 
-            }    
+               
+            }   
+            p{
+                font-size: 11px;
+            } 
             .email-container{
                 .email{
                     width: 320px;
@@ -64,6 +83,11 @@
             height: 100px;
             width: 300px;
             align-self:flex-start;
+            p{
+                font-weight: lighter;
+                font-size: large;
+                text-align: center;
+            }
         } 
     } 
 }
