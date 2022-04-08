@@ -28,13 +28,14 @@
     }
     .btn-container{
         margin-top: 20px;
-        margin-right: 50px;
+        text-align: end;
         .btn{
             background-color: rgb(77, 77, 253);
             color: #fff
         }
     }
     .Password-content{
+        height: 70px;
         .password{
             width: 405px;
             height: 55px;
@@ -55,8 +56,8 @@
     margin-right: 10%;
     padding: 5px;
     .btn-container{
-        margin-right: 50px;
         margin-top: 20px;
+        text-align: end;
         .btn{
             background-color: rgb(77, 77, 253);
             color: #fff
@@ -83,7 +84,7 @@
     margin-right: 5%;
     padding: 10px;
     .btn-container-lt-sm{
-        margin-right: 10px;
+        text-align: end;
         margin-top: 20px;
         .btn{
             background-color: rgb(77, 77, 253);

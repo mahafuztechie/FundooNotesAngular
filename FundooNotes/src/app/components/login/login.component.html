@@ -1,4 +1,5 @@
 <div class="Container" >
+    <form [formGroup]="loginForm">
    <div class="Header">
         <h1>
             <span class="f">F</span>
@@ -15,19 +16,22 @@
         <div class="Email-content">
             <mat-form-field class="email" appearance="outline">
             <mat-label>Enter Your Email</mat-label>
-            <input matInput placeholder="email">
+            <input matInput placeholder="email" formControlName="email">
+            <mat-error>enter valid email</mat-error>
             </mat-form-field> 
         </div>
         <div class="Password-content">
                 <mat-form-field class="password" appearance="outline">
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="password">
+                <input matInput placeholder="password" formControlName="password">
+                <mat-error>enter valid password</mat-error>
                 </mat-form-field>
-                <a href="#" target="_blank">Forgot password?</a>       
+                <a routerLink="/forgetpassword" target="_blank">Forgot password?</a>       
         </div>
     </div>
     <div class="btn">
-        <a mat-button href="https://www.google.com/" target="_blank">create account</a>
+        <a mat-button href="/register" target="_blank">create account</a>
         <button mat-raised-button >Next</button>
     </div>
+    </form>
 </div>

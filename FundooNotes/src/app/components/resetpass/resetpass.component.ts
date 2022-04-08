@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-resetpass',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResetpassComponent implements OnInit {
 
-  constructor() { }
+  resetPassForm!: FormGroup;
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-  }
-
+    this.resetPassForm = this.formBuilder.group({
+      newPassword: ['', [Validators.required, Validators.minLength(6)]],
+      confirmNewPassword: ['', [Validators.required, Validators.minLength(6)]]
+  });
+}
 }

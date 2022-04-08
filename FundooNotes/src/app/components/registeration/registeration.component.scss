@@ -36,39 +36,48 @@
     .subContainer{
         display: flex;
         justify-content: space-between;
+
        
         .form-content{
             display: flex;
             flex-direction: column;
+          
             
             .user-name{
                 display: flex;
                 gap: 20px;
                 .name{
-                    width: 150px; 
+                    width: 180px; 
                 } 
             }  
             .password-container{
                 display: flex;
                 gap: 20px;
-                height: 60px;
+                height: 70px;
                 .password{
-                    width: 150px;
+                    width: 180px;
                 } 
                
             }   
             p{
-                font-size: 11px;
+                font-size: 13px;
+                height: 10px;
             } 
             .email-container{
+                height: 70px;
                 .email{
-                    width: 320px;
+                    width: 380px;
                 }
             }
+            .use-cur-email{
+                color: rgb(77, 77, 253);
+            }
+            
            .btn{
                display: flex;
                justify-content: space-between;
                margin-top: 50px;
+               
                a{
                    color: rgb(77, 77, 253);
                }
@@ -81,7 +90,7 @@
         }
         .register-image{
             height: 100px;
-            width: 300px;
+            width: 40%;
             align-self:flex-start;
             p{
                 font-weight: lighter;
