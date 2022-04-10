@@ -15,6 +15,11 @@ import { ForgetpassComponent } from './components/forgetpass/forgetpass.componen
 import { ResetpassComponent } from './components/resetpass/resetpass.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -22,13 +27,14 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterationComponent,
     LoginComponent,
     ForgetpassComponent,
-    ResetpassComponent
+    ResetpassComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule,FlexLayoutModule,
-    HttpClientModule,ReactiveFormsModule
+    HttpClientModule,ReactiveFormsModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

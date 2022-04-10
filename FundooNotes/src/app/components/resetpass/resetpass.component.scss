@@ -1,33 +1,38 @@
-.container-lt-xl{
+h1{
+    font-size: x-large;
+    font-weight:500;
+    .f{
+        color: rgb(0, 0, 255);
+    }
+    .u{
+        color: rgb(253, 116, 4);
+    }
+    .n{
+        color: rgb(255, 0, 0);
+    }
+    .d{
+        color: rgb(0, 202, 34);
+    }
+    .o{
+        color: rgb(255, 115, 0);
+    }
+}
+.container-gt-md{
     border: 1px solid rgba(240, 209, 209, 0.692);
     border-radius: 10px;
-    height: 60%;
     width: 40%;
     margin-top: 50px;
     margin-left: 30%;
     margin-right: 30%;
     padding: 20px;
-    h1{
-        font-size: x-large;
-        font-weight:500;
-        .f{
-            color: rgb(0, 0, 255);
-        }
-        .u{
-            color: rgb(253, 116, 4);
-        }
-        .n{
-            color: rgb(255, 0, 0);
-        }
-        .d{
-            color: rgb(0, 202, 34);
-        }
-        .o{
-            color: rgb(255, 115, 0);
-        }
-    }
-    .btn-container{
+  
+    .desc{
         margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .btn-container-gt-md{
+        margin-top: 20px;
+        margin-bottom: 30px;
         text-align: end;
         .btn{
             background-color: rgb(77, 77, 253);
@@ -36,6 +41,7 @@
     }
     .Password-content{
         height: 70px;
+        
         .password{
             width: 405px;
             height: 55px;
@@ -46,46 +52,18 @@
         
     } 
 }
-.container-lt-md{
+.container{
     border: 1px solid rgba(240, 209, 209, 0.692);
     border-radius: 10px;
-    height: 80%;
-    width: 80%;
-    margin-top: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 5px;
-    .btn-container{
-        margin-top: 20px;
-        text-align: end;
-        .btn{
-            background-color: rgb(77, 77, 253);
-            color: #fff
-        }
-    }
-    .Password-content{
-        .password{
-            width: 250px;
-            height: 60px;
-        }
-    }
-    .passDesc{
-        font-size: 10px;
-      
-    } 
-}
-.container-lt-sm{
-    border: 1px solid rgba(240, 209, 209, 0.692);
-    border-radius: 10px;
-    height: 80%;
     width: 90%;
     margin-top: 50px;
     margin-left: 5%;
     margin-right: 5%;
     padding: 10px;
-    .btn-container-lt-sm{
+    
+    .btn-container{
+        margin-top: 30px;
         text-align: end;
-        margin-top: 20px;
         .btn{
             background-color: rgb(77, 77, 253);
             color: #fff
@@ -93,12 +71,12 @@
     }
     .Password-content{
         .password{
-            width: 20px;
+            width: 230px;
             height: 60px;
         }
     }
     .passDesc{
         font-size: 8px;
-  
+      
     } 
 }

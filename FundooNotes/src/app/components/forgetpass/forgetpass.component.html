@@ -1,5 +1,5 @@
 <div ngClass.lt-md="container-lt-sm" ngClass.lt-xl="container-lt-xl" ngClass.lt-md="container-lt-md" fxLayout.lt-xl="column"  fxLayoutAlign.lt-xl="center center" fxLayoutAlign.lt-md="center center">
-    <form [formGroup]="forgetPassForm">
+    <form [formGroup]="forgetPassForm"  (ngSubmit)="onSubmit()">
     <div class="Header"  fxLayout.lt-xl="column"  fxLayoutAlign.lt-xl=" center">
         <h1>
             <span class="f">F</span>

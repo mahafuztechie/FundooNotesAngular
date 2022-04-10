@@ -1,48 +1,55 @@
-.container {
+.headings{
+    h1{
+        font-size: large;
+        font-weight:500;
+        .f{
+            color: rgb(0, 0, 255);
+        }
+        .u{
+            color: rgb(253, 116, 4);
+        }
+        .n{
+            color: rgb(255, 0, 0);
+        }
+        .d{
+            color: rgb(0, 202, 34);
+        }
+        .o{
+            color: rgb(255, 115, 0);
+        }
+        
+    }
+    h3{
+        margin-top: -15px;
+        font-size: larger;
+    }
+}
+.btn{
+    margin-top: 50px;
+    
+    a{
+        color: rgb(77, 77, 253);
+    }
+    button{
+        background-color: rgb(77, 77, 253);
+        color: #fff;
+    }
+}
+.container-gt-md{
     margin-top: 20px;
     margin-left: 25%;
     margin-right: 25%;
-    height: 100%;
     width: 50%;
     border: 1px solid rgba(194, 192, 192, 0.76);
     border-radius: 10px;
     padding: 20px;
-    .headings{
-        h1{
-            font-size: large;
-            font-weight:500;
-            .f{
-                color: rgb(0, 0, 255);
-            }
-            .u{
-                color: rgb(253, 116, 4);
-            }
-            .n{
-                color: rgb(255, 0, 0);
-            }
-            .d{
-                color: rgb(0, 202, 34);
-            }
-            .o{
-                color: rgb(255, 115, 0);
-            }
-            
-        }
-        h3{
-            margin-top: -15px;
-            font-size: larger;
-        }
-    }
-    .subContainer{
-        display: flex;
-        justify-content: space-between;
+    
+   
+    .subContainer-gt-md{
 
-       
-        .form-content{
+        .form-content-gt-md{
             display: flex;
             flex-direction: column;
-          
-            
             .user-name{
                 display: flex;
                 gap: 20px;
@@ -73,19 +80,6 @@
                 color: rgb(77, 77, 253);
             }
             
-           .btn{
-               display: flex;
-               justify-content: space-between;
-               margin-top: 50px;
-               
-               a{
-                   color: rgb(77, 77, 253);
-               }
-               button{
-                   background-color: rgb(77, 77, 253);
-                   color: #fff;
-               }
-           }
            
         }
         .register-image{
@@ -100,4 +94,66 @@
         } 
     } 
 }
+
+
+
+
+
+.container{
+    
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    border: 1px solid rgba(194, 192, 192, 0.76);
+    border-radius: 10px;
+    padding: 20px;
+    .headings{
+        h1{
+            font-size:x-large;
+            font-weight:500;
+        }
+        h3{
+            margin-top: -15px;
+            font-size: x-large;
+        }
+    }
+   
+    .subContainer{
+        .form-content{
+            display: flex;
+            flex-direction: column;
+            .user-name{
+                display: flex;
+                flex-direction: column;
+                .name{
+                    width: 100%; 
+                } 
+            }  
+            .password-container{
+                display: flex;
+                flex-direction: column;
+                .password{
+                    width: 100%;
+                } 
+            }   
+            p{
+                font-size: 13px;
+                height: 10px;
+            } 
+            .email-container{
+                .email{
+                    width: 100%;
+                }
+            }
+            .use-cur-email{
+                color: rgb(77, 77, 253);
+            }
+        }
+        .register-image{
+            display: none;
+        }
+    } 
+}
+
 

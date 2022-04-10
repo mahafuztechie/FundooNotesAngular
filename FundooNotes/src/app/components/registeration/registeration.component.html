@@ -1,4 +1,4 @@
-<div class="container">
+<div ngClass.gt-md="container-gt-md" ngClass="container" >
   <div class="headings">
     <h1>
       <span class="f">F</span>
@@ -10,9 +10,9 @@
     </h1>
     <h3>create your fundoo account</h3>
   </div>
-  <div class="subContainer">
+  <div ngClass.gt-md="subContainer-gt-md" ngClass="subContainer" fxLayout.gt-md="row"  fxLayoutAlign.gt-md="space-between center">
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <div class="form-content">
+    <div ngClass.gt-md="form-content-gt-md" ngClass="form-content" fxLayout="column"  fxLayoutAlign="space-between">
           <!-- {form} -->
         <div class="user-name">
             <mat-form-field class="name" appearance="outline">
@@ -53,7 +53,7 @@
       </div>
       <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
       <mat-checkbox class="example-margin">  Show password</mat-checkbox>
-      <div class="btn">
+      <div class="btn" fxLayout="row"  fxLayoutAlign="space-between center">
         <a mat-button routerLink="/login" target="_blank">sign in instead</a>
         <button mat-raised-button >Next</button>
       </div>
