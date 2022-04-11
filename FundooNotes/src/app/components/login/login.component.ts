@@ -28,6 +28,7 @@ onSubmit(){
     }
       this.userservice.login(data).subscribe((res:any)=>{
         console.log(res);
+        localStorage.setItem('token', res.data);
       })
    
   }else{

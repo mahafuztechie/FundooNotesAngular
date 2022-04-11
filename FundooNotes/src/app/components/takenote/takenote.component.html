@@ -1,0 +1,39 @@
+<!-- <p>createnote works!</p> -->
+
+<!-- <div class="Container">
+    <div class="row-content" fxLayoutAlign="space-between left">
+      <div class="formhead">Take a Note...</div>
+        <span class="material-icons-outlined">
+          <div>
+            <img class="search_image" src="../../../assets/images/newlist.svg">
+            <img class="search_image" src="../../../assets/images/drawing.svg">
+            <img class="search_image" src="../../../assets/images/img.svg">
+          </div>
+            </span>
+</div>
+</div>
+ <div class="Container">
+<h4>Take a Note...</h4>
+</div> --> 
+<mat-card #takenote class="matcard_wrraper" (click)="noteClick()">
+    <div class="title-pin" *ngIf="notelist">
+      <mat-card-title><input matInput placeholder="title" [(ngModel)]="title"></mat-card-title>
+      <img class="icontop" src="../../../assets/push_pin_black_24dp.svg">
+      
+    </div>
+  
+    <input matInput placeholder="Take a note" [(ngModel)]="description">
+    <div class="formhead" *ngIf="!notelist" >
+      <img class="search_image" src="../../../assets/check_box_black_24dp.svg">
+      <img class="searchimage" src="../../../assets/brush_black_24dp.svg">
+      <img class="search_image" src="../../../assets/image_black_24dp.svg">
+    </div>
+    <div *ngIf="notelist">
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <app-icons></app-icons>
+        <button class="close-button" mat-button (click)="noteClose()">close</button>
+      </div>
+    </div>
+</mat-card>
+  
+  
