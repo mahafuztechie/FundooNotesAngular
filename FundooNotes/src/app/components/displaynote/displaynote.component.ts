@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NoteService } from 'src/app/service/noteService/note.service';
 
 @Component({
   selector: 'app-displaynote',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./displaynote.component.scss']
 })
 export class DisplaynoteComponent implements OnInit {
-
+  @Input() childMessage: any;
   constructor() { }
 
   ngOnInit(): void {

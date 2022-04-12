@@ -24,4 +24,17 @@ export class NoteService {
     }
     return this.httpService.postService('https://localhost:44322/api/Notes/create',data,true,header)
   }
+
+  getallnotes(){
+    console.log("token",this.token);
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+          'Authorization': `bearer ${this.token}`
+      })
+    }
+    return this.httpService.getService('https://localhost:44322/api/Notes/Getnotes', true, header)
+ }
+
 }

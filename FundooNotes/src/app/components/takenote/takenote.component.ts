@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NgModelGroup } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormGroup, NgControl, NgForm, NgModelGroup } from '@angular/forms';
 import { NoteService } from 'src/app/service/noteService/note.service';
 
 @Component({
@@ -8,7 +8,8 @@ import { NoteService } from 'src/app/service/noteService/note.service';
   styleUrls: ['./takenote.component.scss']
 })
 export class TakenoteComponent implements OnInit {
-
+@Output() createToGetAllNotes = new EventEmitter<string>()
+takenote!:NgForm;
   public notelist :boolean=false;
   description:string = ""
   title:string=""
@@ -20,10 +21,11 @@ export class TakenoteComponent implements OnInit {
   istrash:boolean=false;
   createdAt:any="2022-04-11T11:27:12.305Z"
   modifiedAt:any="2022-04-11T11:27:12.305Z"
-  constructor(private noteService: NoteService) { }
+  constructor(private noteService: NoteService,) { }
 
   ngOnInit(): void {
    
+  
   }
   noteClick(){
     
@@ -34,20 +36,26 @@ export class TakenoteComponent implements OnInit {
     
     this.notelist = false
     console.log(this.title, this.description);
-    let data={
-      title: this.title,
-      description:this.description,
-      reminder: this.reminder,
-      color: this.color,
-      image: this.image,
-      isTrash: this.istrash,
-      isArchive: this.isarchive,
-      isPinned: this.ispin,
-      createdAt: this.createdAt,
-      modifiedAt: this.modifiedAt
+    if((this.title==null||this.title=="") && (this.description==null||this.description=="")){
+      console.log("values are null");
     }
-    this.noteService.createnote(data).subscribe((res:any)=>{
-      console.log(res);
-    })
+    else{
+      let data={
+        title: this.title,
+        description:this.description,
+        reminder: this.reminder,
+        color: this.color,
+        image: this.image,
+        isTrash: this.istrash,
+        isArchive: this.isarchive,
+        isPinned: this.ispin,
+        createdAt: this.createdAt,
+        modifiedAt: this.modifiedAt
+      }
+      this.noteService.createnote(data).subscribe((res:any)=>{
+        console.log(res);
+        this.createToGetAllNotes.emit(res);
+      })
+    }
   }
 }
