@@ -12,6 +12,7 @@ export class DisplaynoteComponent implements OnInit {
   @Input() childMessage: any;
   @Output() noteUpdated = new EventEmitter<any>();
   @Output() displaytogetallnotes=new EventEmitter<string>();
+  col: any;
   constructor(public dialog: MatDialog) { }
   ngOnInit(): void {
    }

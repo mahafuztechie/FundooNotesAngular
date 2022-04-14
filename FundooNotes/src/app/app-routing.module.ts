@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArchiveComponent } from './components/archive/archive.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgetpassComponent } from './components/forgetpass/forgetpass.component';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterationComponent } from './components/registeration/registeration.component';
 import { ResetpassComponent } from './components/resetpass/resetpass.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 const routes: Routes = [
   {path:'register', component: RegisterationComponent},
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path:'dashboard', component: DashboardComponent,
 children: [
   {path:'getallnotes', component: GetallnotesComponent},
+  {path:'trash', component: TrashComponent},
+  {path:'archive', component: ArchiveComponent}
 ]}
 ];
 

@@ -31,6 +31,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { TrashComponent } from './components/trash/trash.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';
+import { ArchiveComponent } from './components/archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {MatMenuModule} from '@angular/material/menu';
     DisplaynoteComponent,
     IconsComponent,
     UpdateComponent,
-    TrashComponent
+    TrashComponent,
+    ArchiveComponent
   ],
   imports: [
     BrowserModule,

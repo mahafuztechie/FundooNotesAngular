@@ -8,8 +8,10 @@ import { NoteService } from 'src/app/service/noteService/note.service';
 })
 export class IconsComponent implements OnInit {
   noteId: any
+  color:any
   @Input() noteObject:any
   @Output() iconstodisplay = new EventEmitter<string>();
+  colorarray = ['#fff', '#f28b82', '#fbbc04', '#fff475', '#ccff90', '#a7ffeb', '#cbf0f8', '#aecbfa'];
   constructor(private note: NoteService) { 
     
   }
@@ -39,4 +41,16 @@ export class IconsComponent implements OnInit {
     })
     
   }
+
+  setColor(Color:any){
+    this.noteId=[this.noteObject.notesId]
+    let data = {
+      color : Color
+    }
+    this.note.ColorNote(this.noteId,data).subscribe((result: any) => {
+      console.log(result); 
+      this.iconstodisplay.emit(result)
+
+  })
+}
 }

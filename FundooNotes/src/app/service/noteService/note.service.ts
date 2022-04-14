@@ -60,7 +60,7 @@ export class NoteService {
   return this.httpService.putService("https://localhost:44322/api/Notes/IsTrashOrNot/"+id,{},true,header)
   }
 
-  archiveNotes(id:any){
+archiveNotes(id:any){
 
     let headersOption = {
       headers: new HttpHeaders({
@@ -71,5 +71,18 @@ export class NoteService {
     }
     return this.httpService.putService("https://localhost:44322/api/Notes/IsArchiveOrNot/"+id,{},true,headersOption)
   }
+
+  ColorNote(id:any, data:any){
+
+    let headersOption = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': `Bearer  ${this.token}`		
+      })
+
+    }
+    return this.httpService.putService("https://localhost:44322/api/Notes/colour/"+id,data,true,headersOption)
+  }
+    
 
 }

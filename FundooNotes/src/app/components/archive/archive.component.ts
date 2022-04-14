@@ -3,24 +3,25 @@ import { MatDialog } from '@angular/material/dialog';
 import { NoteService } from 'src/app/service/noteService/note.service';
 
 @Component({
-  selector: 'app-trash',
-  templateUrl: './trash.component.html',
-  styleUrls: ['./trash.component.scss']
+  selector: 'app-archive',
+  templateUrl: './archive.component.html',
+  styleUrls: ['./archive.component.scss']
 })
-export class TrashComponent implements OnInit {
-  trashList : any;
+export class ArchiveComponent implements OnInit {
+  archiveList: any;
+  
 
   constructor(public dialog: MatDialog, private noteService: NoteService) { }
 
   ngOnInit(): void {
-    this.getTrashList();
+    this.getArchiveList();
   }
-  getTrashList(){
+  getArchiveList() {
     this.noteService.getallnotes().subscribe((res: any) => {
       console.log(res.data);
-       this.trashList=res.data
-       this.trashList = res.data.filter((object: any) => {
-        return object.isTrash === true;
+       this.archiveList=res.data
+       this.archiveList = res.data.filter((object: any) => {
+        return object.isArchive === true;
       })
      
     })
@@ -28,7 +29,8 @@ export class TrashComponent implements OnInit {
     }
     receiveMessagefromdisplaycard($event: any) {
       console.log("insidegetallnotes", $event);
-      this.getTrashList();
+      this.getArchiveList();
 
   }
+
 }
