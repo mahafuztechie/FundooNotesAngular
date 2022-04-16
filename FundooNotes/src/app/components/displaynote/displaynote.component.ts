@@ -12,13 +12,12 @@ export class DisplaynoteComponent implements OnInit {
   @Input() childMessage: any;
   @Output() noteUpdated = new EventEmitter<any>();
   @Output() displaytogetallnotes=new EventEmitter<string>();
-  col: any;
   constructor(public dialog: MatDialog) { }
   ngOnInit(): void {
    }
    openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdateComponent, {
-     width: '250px',
+     width: '350px',
      data:note
      });
      dialogRef.afterClosed().subscribe(result => {

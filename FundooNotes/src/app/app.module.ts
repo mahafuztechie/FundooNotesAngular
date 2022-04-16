@@ -32,6 +32,7 @@ import { TrashComponent } from './components/trash/trash.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';
 import { ArchiveComponent } from './components/archive/archive.component';
+import { AuthguardserviceService } from './authguardservice.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,10 @@ import { ArchiveComponent } from './components/archive/archive.component';
     HttpClientModule,ReactiveFormsModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule,MatCardModule,
     FormsModule,MatDialogModule,MatSelectModule,MatMenuModule
   ],
-  providers: [],
+  providers: [
+
+    AuthguardserviceService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -54,6 +54,8 @@ takenote!:NgForm;
       }
       this.noteService.createnote(data).subscribe((res:any)=>{
         console.log(res);
+        this.title="";
+        this.description="";
         this.createToGetAllNotes.emit(res);
       })
     }
