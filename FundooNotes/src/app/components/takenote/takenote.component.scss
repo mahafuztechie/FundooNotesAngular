@@ -4,11 +4,11 @@
         margin-left: 426px;
         margin-top: 83px;
     }
-.matcard_wrraper-lt-md{
+.matcard_wrraper-lt-lg{
         width: 300px;
         /* margin-bottom: -22px; */
-        margin-left: 150px;
-        margin-top: 20px;
+        margin-left: 50px;
+        margin-top: 10px;
  }
  .search_image{
     padding: 5px;
@@ -27,6 +27,10 @@
  .takenotefield{
     display: flex;
     justify-content: space-between;
+ }
+ .formhead{
+     display: flex;
+     justify-content: space-between;
  }
  .title-pin{
      width: fit-content;
