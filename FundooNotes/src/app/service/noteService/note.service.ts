@@ -72,6 +72,18 @@ archiveNotes(id:any){
     return this.httpService.putService("https://localhost:44322/api/Notes/IsArchiveOrNot/"+id,{},true,headersOption)
   }
 
+  deleteNote(id:any){
+    console.log("token",this.token);
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+          'Authorization': `bearer ${this.token}`
+      })
+    }
+    return this.httpService.deleteService('https://localhost:44322/api/Notes/delete/'+id, true, header)
+ }
+
   ColorNote(id:any, data:any){
 
     let headersOption = {
