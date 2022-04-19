@@ -19,7 +19,7 @@ export class IconsComponent implements OnInit {
   isDeleted: boolean = false
   isArchived: boolean = false
   
-  colorarray = ['#d7aefb', '#f28b82', '#fbbc04', '#fff475', '#ccff90', '#a7ffeb', '#cbf0f8', '#aecbfa', '#e8eaed', '#8f5085', '#ff6205', '#006973'];
+  colorarray = ['#d7aefb', '#f28b82', '#fbbc04', '#fff475', '#ccff90', '#a7ffeb', '#cbf0f8', '#aecbfa', '#e8eaed', '#e6c9a8', '#e8eaed', '#006973'];
   constructor(private note: NoteService, private activatedroute: ActivatedRoute) { 
   
   }

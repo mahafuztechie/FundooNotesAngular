@@ -13,3 +13,9 @@
 .icons{
     text-align: center;
 }
+
+  ::ng-deep .my-custom-dialog-class {
+    mat-dialog-container {
+      padding: 0;
+    }
+  }
