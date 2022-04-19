@@ -9,6 +9,7 @@ import { NoteService } from 'src/app/service/noteService/note.service';
   styleUrls: ['./update.component.scss']
 })
 export class UpdateComponent implements OnInit {
+  
   @Output() noteUpdated = new EventEmitter<any>();
   Title: any
   Description: any
@@ -45,28 +46,25 @@ export class UpdateComponent implements OnInit {
        
     })
     this.dialogRef.close()
-    
-
   }
 
   receiveMessage($event:any){
     console.log("event======>"+$event);
-    this.Color($event.color, this.noteId);
+   // this.Color($event.color, this.noteId);
     this.noteUpdated.emit($event);
    
   }
-  Color(Color:any, noteId:any ){
-    
-    let data = {
-      color : Color
-    }
-    this.NoteService.ColorNote(noteId,data).subscribe((result: any) => {
-      console.log(result); 
-      this.noteUpdated.emit(result);
-    
 
-  })
+//   Color(Color:any, noteId:any ){
+    
+//     let data = {
+//       color : Color
+//     }
+//     this.NoteService.ColorNote(noteId,data).subscribe((result: any) => {
+//       console.log(result); 
+//       this.noteUpdated.emit(result);
+//   })
   
-}
+// }
 
 }

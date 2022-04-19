@@ -1,6 +1,7 @@
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import { Router } from '@angular/router';
+import { DatashareService } from 'src/app/service/datashare/datashare.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
+  Search: any;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
@@ -24,7 +26,7 @@ export class DashboardComponent implements OnDestroy {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router, private data: DatashareService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -38,5 +40,9 @@ export class DashboardComponent implements OnDestroy {
     localStorage.removeItem("token");
     this.router.navigateByUrl('/login')
 
+  }
+  
+  lookfor() {
+    this.data.changeMessage(this.Search)
   }
 }

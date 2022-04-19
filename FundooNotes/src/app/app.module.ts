@@ -33,6 +33,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { AuthguardserviceService } from './authguardservice.service';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AuthguardserviceService } from './authguardservice.service';
     IconsComponent,
     UpdateComponent,
     TrashComponent,
-    ArchiveComponent
+    ArchiveComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
