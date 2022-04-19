@@ -1,12 +1,14 @@
 
-.displaynote-container{
-    display: flex;
-    flex-direction: column;
-
-    
-}
-.dispaynote-container-gt-md{
+.dispaynote-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.formatStyle{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }

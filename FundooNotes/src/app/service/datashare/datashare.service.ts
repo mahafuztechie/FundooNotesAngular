@@ -5,18 +5,13 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class DatashareService {
-  private labelMsg=new Subject<string>();
-  getLabel = this.labelMsg.asObservable();
+  private info = new Subject<any>();
+  public store = this.info.asObservable();
+  
+  constructor() { 
 
-  private messageSource = new BehaviorSubject('');
-  currentMessage = this.messageSource.asObservable();
-
-  constructor() { }
-
-
-  changeMessage(message: string) {
-    console.log(message);
-
-    this.messageSource.next(message)
+  }
+  updateDataValue(trueOrFalse:any){
+    this.info.next(trueOrFalse);
   }
 }

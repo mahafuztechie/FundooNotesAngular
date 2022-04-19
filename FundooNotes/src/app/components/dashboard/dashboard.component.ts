@@ -11,6 +11,7 @@ import { DatashareService } from 'src/app/service/datashare/datashare.service';
 export class DashboardComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
   Search: any;
+  isGrid: boolean=false;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
@@ -42,7 +43,29 @@ export class DashboardComponent implements OnDestroy {
 
   }
   
-  lookfor() {
-    this.data.changeMessage(this.Search)
+  listview(){
+    this.isGrid=false;
+    this.data.updateDataValue(this.display().valueOf());
+    console.log("function",this.display());
+    console.log("grid",this.isGrid);
   }
+
+  gridview(){
+    this.isGrid=true
+    this.data.updateDataValue(this.display().valueOf());
+    console.log("function",this.display());
+    console.log("grid",this.isGrid);
+  }
+  changeFormat: boolean=false
+  display(){
+    if(this.changeFormat == false){
+      this.changeFormat=true
+      return this.changeFormat
+    }
+    else{
+      this.changeFormat=false
+      return this.changeFormat
+    }
+  }
+
 }

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DatashareService } from 'src/app/service/datashare/datashare.service';
 import { UpdateComponent } from '../update/update.component';
 
 @Component({
@@ -9,11 +10,14 @@ import { UpdateComponent } from '../update/update.component';
 })
 export class DisplaynoteComponent implements OnInit {
   sentmsg: any;
+  format: any;
   @Input() childMessage: any;
   @Output() noteUpdated = new EventEmitter<any>();
   @Output() displaytogetallnotes=new EventEmitter<string>();
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private data: DatashareService) { }
+
   ngOnInit(): void {
+    this.data.store.subscribe(x => this.format=x)
    }
    openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdateComponent, {
