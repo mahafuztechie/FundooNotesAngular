@@ -9,6 +9,7 @@ import { UserService } from 'src/app/service/userService/user.service';
 })
 export class RegisterationComponent implements OnInit {
   registerForm!: FormGroup;
+  hide: boolean = true;
   constructor(private formBuilder: FormBuilder, private userservice:UserService) { }
 
   ngOnInit():void{
@@ -39,5 +40,9 @@ export class RegisterationComponent implements OnInit {
     }
 
   }
+
+  showPassword() {
+    this.hide = !this.hide;
+ }
 }
 
