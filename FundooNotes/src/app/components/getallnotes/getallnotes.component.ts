@@ -13,6 +13,7 @@ export class GetallnotesComponent implements OnInit {
   constructor(private note:NoteService) { }
 
   ngOnInit(): void {
+    
     this.getallNotes()
   }
 
@@ -36,7 +37,6 @@ export class GetallnotesComponent implements OnInit {
     this.getallNotes()
   }
   updatedData(value: any) {
-
     this.getallNotes();
   }
 }

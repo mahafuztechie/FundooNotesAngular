@@ -10,7 +10,6 @@ import { DatashareService } from 'src/app/service/datashare/datashare.service';
 })
 export class DashboardComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
-  Search: any;
   isGrid: boolean=false;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
@@ -68,4 +67,7 @@ export class DashboardComponent implements OnDestroy {
     }
   }
 
+  search(stringData:any){
+    this.data.updateSearch(stringData.target.value);
+  }
 }

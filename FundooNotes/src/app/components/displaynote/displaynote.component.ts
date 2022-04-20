@@ -11,6 +11,7 @@ import { UpdateComponent } from '../update/update.component';
 export class DisplaynoteComponent implements OnInit {
   sentmsg: any;
   format: any;
+  searchNote="";
   @Input() childMessage: any;
   @Output() noteUpdated = new EventEmitter<any>();
   @Output() displaytogetallnotes=new EventEmitter<string>();
@@ -18,6 +19,7 @@ export class DisplaynoteComponent implements OnInit {
 
   ngOnInit(): void {
     this.data.store.subscribe(x => this.format=x)
+    this.data.searchStore.subscribe(y => this.searchNote=y)
    }
    openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdateComponent, {

@@ -7,11 +7,17 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class DatashareService {
   private info = new Subject<any>();
   public store = this.info.asObservable();
+
+  private searchInfo = new Subject<any>();
+  public searchStore = this.searchInfo.asObservable();
   
   constructor() { 
 
   }
-  updateDataValue(trueOrFalse:any){
-    this.info.next(trueOrFalse);
+  updateDataValue(val:any){
+    this.info.next(val);
+  }
+  updateSearch(val:any){
+    this.searchInfo.next(val);
   }
 }
