@@ -34,6 +34,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { AuthguardserviceService } from './authguardservice.service';
 import { FilterPipe } from './pipes/filter.pipe';
+import { CollaboratorComponent } from './components/collaborator/collaborator.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     UpdateComponent,
     TrashComponent,
     ArchiveComponent,
-    FilterPipe
+    FilterPipe,
+    CollaboratorComponent
   ],
   imports: [
     BrowserModule,

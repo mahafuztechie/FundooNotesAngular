@@ -1,0 +1,41 @@
+<div>
+<div style="padding: 10px;" fxLayout="column" fxLayoutAlign="space-between">
+    <div class="title">
+        <h1>Collaborators</h1>
+    </div>
+    <div ngClass="collab-content" fxLayout="column" fxLayoutAlign="start">
+        <div fxLayout="row" fxLayoutAlign="start center" >
+            
+            <img src="../../../assets/blank-profile-picture-973460_960_720.webp" alt="">
+           
+            <div ngClass="ownerdetails" fxLayout="column">
+                <h2>username</h2>
+                <p>user email</p>
+            </div>
+        </div>
+       
+        <div fxLayout="row" fxLayoutAlign="start center">
+            
+            <img src="../../../assets/user-2935527_960_720.png" alt="">
+            
+            <div  ngClass="collabdetails" fxLayout="column">
+                <h2>collab name</h2>
+                <input matInput placeholder="colab email" type="email" style="outline-style: none; border: none; background-color: transparent;">
+            </div>
+        </div>
+    </div>
+  
+</div>
+<div ngClass="collab-buttons" fxLayout="row" fxLayoutAlign="end center" style="background-color: rgba(240, 236, 236, 0.9); height: 70px; margin-top: 50px;">
+    <div>
+        <button mat-icon-button (click)="cancelCollab()" style="opacity: 0.9; width: 60px; border-radius: 10px;">
+            Cancel
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button (click)="addCollab()" style="opacity: 0.9; width: 60px; border-radius: 10px; margin-left: 40px; margin-right: 20px;">
+            Close
+        </button>
+    </div>
+</div>
+</div>

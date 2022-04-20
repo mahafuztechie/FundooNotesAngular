@@ -2,7 +2,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NoteService } from 'src/app/service/noteService/note.service';
 import { ArchiveComponent } from '../archive/archive.component';
+import { CollaboratorComponent } from '../collaborator/collaborator.component';
 import { TrashComponent } from '../trash/trash.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-icons',
@@ -20,7 +22,7 @@ export class IconsComponent implements OnInit {
   isArchived: boolean = false
   
   colorarray = ['#d7aefb', '#f28b82', '#fbbc04', '#fff475', '#ccff90', '#a7ffeb', '#cbf0f8', '#aecbfa', '#e8eaed', '#e6c9a8', '#e8eaed', '#006973'];
-  constructor(private note: NoteService, private activatedroute: ActivatedRoute) { 
+  constructor(private note: NoteService, private activatedroute: ActivatedRoute, public dialog: MatDialog) { 
   
   }
 
@@ -78,5 +80,17 @@ export class IconsComponent implements OnInit {
       console.log(result); 
       this.iconstodisplay.emit(result)
     })
+  }
+
+  Collab(collab:any): void {
+    const dialogRef = this.dialog.open(CollaboratorComponent, {
+     width: '450px',
+     panelClass: 'my-custom-dialog-class',
+     data:collab
+     });
+     dialogRef.afterClosed().subscribe(result => {
+     console.log('The dialog was closed'); 
+      
+     });
   }
 }
