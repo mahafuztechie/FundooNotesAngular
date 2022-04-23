@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ResetpassComponent } from './resetpass.component';
 
@@ -8,7 +10,8 @@ describe('ResetpassComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResetpassComponent ]
+      declarations: [ ResetpassComponent ],
+      imports: [ReactiveFormsModule, HttpClientModule]
     })
     .compileComponents();
   });
@@ -21,5 +24,9 @@ describe('ResetpassComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('getAllBooks', () => {
+    component.onSubmit()
+    expect(component. onSubmit).toBeTruthy();
   });
 });
