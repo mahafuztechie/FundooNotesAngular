@@ -1,4 +1,4 @@
-<div  *ngFor="let note of childMessage | filter: searchNote" class="takenote" fxLayout="column" [style.background]="note.color" [class.formatStyle]="format">
+<div  *ngFor="let note of childMessage | filter: searchNote" ngClass="takenote" ngClass.lt-lg="grid-list-lt-lg" fxLayout="column" [style.background]="note.color" [class.formatStyle]="format">
     <div fxLayout="row" fxLayoutAlign="space-between">
         <p (click)="openDialog(note)">{{note.title}}</p>
         <img class="icontop" src="../../../assets/push_pin_black_24dp.svg">
@@ -6,7 +6,7 @@
    
     <p (click)="openDialog(note)">{{note.description}}</p>
   
-    <div class="icons">
+    <div class="icons" ngClass.lt-lg="icons-lt-lg">
         <app-icons [noteObject]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)" (noteOperation)="operation($event)"></app-icons>
     </div>
 

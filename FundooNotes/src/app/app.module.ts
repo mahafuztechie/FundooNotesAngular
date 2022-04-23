@@ -28,6 +28,7 @@ import { IconsComponent } from './components/icons/icons.component';
 import {MatCardModule} from '@angular/material/card';
 import { UpdateComponent } from './components/update/update.component';
 import {MatDialogModule} from '@angular/material/dialog';
+
 import { TrashComponent } from './components/trash/trash.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';

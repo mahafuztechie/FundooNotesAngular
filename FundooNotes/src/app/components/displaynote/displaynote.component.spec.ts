@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogContent, MatDialogModule } from '@angular/material/dialog';
 
 import { DisplaynoteComponent } from './displaynote.component';
 
@@ -8,7 +9,8 @@ describe('DisplaynoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisplaynoteComponent ]
+      declarations: [ DisplaynoteComponent ],
+      imports:[MatDialogModule]
     })
     .compileComponents();
   });
@@ -22,4 +24,5 @@ describe('DisplaynoteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });

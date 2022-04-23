@@ -91,7 +91,7 @@
     }
     
   }
-  .listmenuIcon-lt-md{
+  .refreshIcon-lt-lg, .settingsIcon-lt-lg, .menuIcon-lt-lg{
     display: none;
   }
   .right-icons-lt-lg{
@@ -150,3 +150,9 @@
     }
   }
 
+  .notes-container{
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }

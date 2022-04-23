@@ -1,7 +1,7 @@
 .takenote{
     border: 1px solid green; 
     width: 250px;
-    margin-left: 70px;
+    margin-left: 65px;
     border-color: #e0e0e0;
     margin-top: 44px;
     border-radius: 14px;
@@ -12,6 +12,10 @@
    opacity: 0;
 }
 .takenote:hover .icons{
+  text-align: center;
+  opacity: 1;
+}
+.icons-lt-lg{
   text-align: center;
   opacity: 1;
 }
@@ -26,6 +30,12 @@
     width: 600px;
     height: auto;
     margin-left: 440px;
-   
- 
+    
+}
+.grid-list-lt-lg{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 10px;
 }
