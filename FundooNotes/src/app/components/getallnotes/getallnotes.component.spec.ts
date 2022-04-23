@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GetallnotesComponent } from './getallnotes.component';
@@ -8,7 +9,8 @@ describe('GetallnotesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GetallnotesComponent ]
+      declarations: [ GetallnotesComponent ],
+      imports:[HttpClientModule]
     })
     .compileComponents();
   });
@@ -21,5 +23,9 @@ describe('GetallnotesComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('getallNotes', () => {
+    component.getallNotes()
+    expect(component.getallNotes).toBeTruthy();
   });
 });

@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ForgetpassComponent } from './forgetpass.component';
 
@@ -8,7 +10,8 @@ describe('ForgetpassComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForgetpassComponent ]
+      declarations: [ ForgetpassComponent ],
+      imports: [ReactiveFormsModule, HttpClientModule]
     })
     .compileComponents();
   });
@@ -21,5 +24,9 @@ describe('ForgetpassComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('getAllBooks', () => {
+    component.onSubmit()
+    expect(component. onSubmit).toBeTruthy();
   });
 });

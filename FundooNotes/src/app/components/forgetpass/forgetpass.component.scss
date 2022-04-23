@@ -1,3 +1,31 @@
+h1{
+    font-size: x-large;
+    font-weight:500;
+    .f{
+        color: rgb(0, 0, 255);
+    }
+    .u{
+        color: rgb(253, 116, 4);
+    }
+    .n{
+        color: rgb(255, 0, 0);
+    }
+    .d{
+        color: rgb(0, 202, 34);
+    }
+    .o{
+        color: rgb(255, 115, 0);
+    }
+}
+
+.btn-container{
+    text-align: end;
+    .btn{
+        background-color: rgb(77, 77, 253);
+        color: #fff
+    }
+}
+
 .container-lt-xl{
     border: 1px solid rgba(240, 209, 209, 0.692);
     border-radius: 10px;
@@ -7,32 +35,8 @@
     margin-left: 30%;
     margin-right: 30%;
     padding: 20px;
-    h1{
-        font-size: x-large;
-        font-weight:500;
-        .f{
-            color: rgb(0, 0, 255);
-        }
-        .u{
-            color: rgb(253, 116, 4);
-        }
-        .n{
-            color: rgb(255, 0, 0);
-        }
-        .d{
-            color: rgb(0, 202, 34);
-        }
-        .o{
-            color: rgb(255, 115, 0);
-        }
-    }
-    .btn-container{
-        text-align: end;
-        .btn{
-            background-color: rgb(77, 77, 253);
-            color: #fff
-        }
-    }
+ 
+   
     .Email-content{
         .email{
             width: 405px;
@@ -49,13 +53,7 @@
     margin-left: 10%;
     margin-right: 10%;
     padding: 5px;
-    .btn-container{
-        text-align: end;
-        .btn{
-            background-color: rgb(77, 77, 253);
-            color: #fff
-        }
-    }
+  
     .Email-content{
         .email{
             width: 250px;
@@ -71,13 +69,7 @@
     margin-left: 5%;
     margin-right: 5%;
     padding: 10px;
-    .btn-container-lt-sm{
-        text-align: end;
-        .btn{
-            background-color: rgb(77, 77, 253);
-            color: #fff
-        }
-    }
+
     .Email-content{
         .email{
             width: 10px;
