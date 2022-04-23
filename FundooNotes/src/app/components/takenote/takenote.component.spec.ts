@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TakenoteComponent } from './takenote.component';
@@ -8,7 +9,8 @@ describe('TakenoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TakenoteComponent ]
+      declarations: [ TakenoteComponent ],
+      imports:[HttpClientModule]
     })
     .compileComponents();
   });
@@ -22,4 +24,13 @@ describe('TakenoteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('noteClose', () => {
+    component.noteClose()
+    expect(component.noteClose).toBeTruthy();
+  });
+  it('noteClick', () => {
+    component.noteClick()
+    expect(component.noteClick).toBeTruthy();
+  });
+
 });
